@@ -14,6 +14,8 @@ public class filename : MonoBehaviour
   {
     if(/*condition*/){
       SceneManager.LoadScene("/*SceneName*/");
+      Debug.Log(SceneManager.GetActiveScene().name);
+      //Print out Now Scene on Console
     }
   }
 }
