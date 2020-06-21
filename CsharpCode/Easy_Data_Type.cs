@@ -23,6 +23,8 @@ public class limitless : MonoBehaviour
   public (Datatype) (name) ; or
   private (Datatype) (name) ;
   */
+  public int a ;
+  private float c ;
   void Start(){
   
   }
