@@ -22,7 +22,7 @@ public class Collect : MonoBehaviour
         Destroy(other.gameObject);
         old_score = int.Parse(score.text);
         new_score  = old_score + 5;
-        score.text = new_score.ToString;
+        score.text = new_score.ToString();
     }
     /*
     void OnCollisionExit(Collision other){
