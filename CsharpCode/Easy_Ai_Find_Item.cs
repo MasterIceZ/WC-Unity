@@ -12,7 +12,7 @@ public class FindItem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        target = new List<GameObject>();
     }
 
     // Update is called once per frame
@@ -20,10 +20,13 @@ public class FindItem : MonoBehaviour
     {
         dist = Mathf.Infinity;
         foreach(GameObject x in target){
-            if(Vector3.Distance(gameObject.transform.position,x.transform.position)<dist){
+            if(x!=null){
+                if(Vector3.Distance(gameObject.transform.position,x.transform.position)<dist){
                 dist = Mathf.Min (Vector3.Distance(gameObject.transform.position,x.transform.position),dist);
                 Obj = x;
             }
+            }
+            
         }
         gameObject.GetComponent<AICharacterControl>().target = Obj.transform;    
     }
