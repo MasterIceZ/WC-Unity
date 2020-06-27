@@ -19,6 +19,7 @@ public class FindItem : MonoBehaviour
     void Update()
     {
         dist = Mathf.Infinity;
+        Obj = null;
         foreach(GameObject x in target){
             if(x!=null){
                 if(Vector3.Distance(gameObject.transform.position,x.transform.position)<dist){
@@ -26,9 +27,11 @@ public class FindItem : MonoBehaviour
                 Obj = x;
             }
             }
-            
         }
-        gameObject.GetComponent<AICharacterControl>().target = Obj.transform;    
+        if(Obj!=null){
+            gameObject.GetComponent<AICharacterControl>().target = Obj.transform;  
+        }
+          
     }
     
 }
