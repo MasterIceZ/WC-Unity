@@ -14,6 +14,6 @@ public class filename : MonoBehaviour
   KB :
   Input.GetKeyDown(Keycode.name)
   Mouse :
-  Input.GetMouseButton(name)
+  Input.GetMouseButtonDown(name)
   */
 }
