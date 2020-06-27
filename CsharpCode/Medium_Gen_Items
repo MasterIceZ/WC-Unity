@@ -17,7 +17,7 @@ public class SpawnItem : MonoBehaviour
     {
         
     }
-    IEnumerable wait_spawn(){
+    IEnumerator wait_spawn(){
         while(true){
             yield return new WaitForSeconds(10);
             Instantiate(Items[Random.Range(0,4)],new Vector3(Random.Range(-56,53),2,Random.Range(-20,20)),Quaternion.identity);
