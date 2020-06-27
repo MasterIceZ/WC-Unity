@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class SpawnItem : MonoBehaviour
 {
-    public List <GameObject> Items;
+    static public List <GameObject> Items;
+    private GameObject now;
 
     // Start is called before the first frame update
     void Start() 
     {
-        StartCoroutine(wait_spawn());
+        StartCoroutine(Spawn());
     }
 
     // Update is called once per frame
@@ -17,10 +18,11 @@ public class SpawnItem : MonoBehaviour
     {
         
     }
-    IEnumerator wait_spawn(){
+    IEnumerator Spawn(){
         while(true){
             yield return new WaitForSeconds(10);
-            Instantiate(Items[Random.Range(0,4)],new Vector3(Random.Range(-56,53),2,Random.Range(-20,20)),Quaternion.identity);
+            now = Instantiate(Items[Random.Range(0,4)],new Vector3(Random.Range(-56,53),2,Random.Range(-20,20)),Quaternion.identity);
+            FindItem.target.Add(now);
         }
     }
 }
