@@ -18,7 +18,8 @@ public class Collect : MonoBehaviour
         
     }
     private int old_score , new_score;
-    void OnCollisionEnter(Collision other){
+    void OnCollisionEnter(Collision other)
+    {
         Destroy(other.gameObject);
         old_score = int.Parse(score.text);
         new_score  = old_score + 5;
