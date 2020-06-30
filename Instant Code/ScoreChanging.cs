@@ -1,5 +1,5 @@
-using System.Collection;
-using System.Collection.Generic;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 /*
@@ -9,29 +9,30 @@ using UnityEngine.UI;
  * */
 public class ScoreChanging : MonoBehaviour
 {
-	public Text ScoreStr;
-	static public int Score;
+    public static int ScoreValue = 0;
+    public Text Score;
 	void Start()
 	{
-		Score = 0;
-		ScoreStr.text = "";
+		//ScoreValue = GetComponent<Text>();
 	}
 
 	void Update()
 	{
-		ScoreStr.text = "" + score;
+		ChangeScore();
+		
+		Debug.Log(ScoreValue);
 	}
 	
 	private bool temp = false;
 
-	void ChangeScore()
+    void ChangeScore()
 	{
 		/*
 		 * Enter Your Case to get Score here!!
 		 * */
 		if(temp)
 		{
-			Score+=1;
+			ScoreValue+=1;
 		}
 	}	
 }
