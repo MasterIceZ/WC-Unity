@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cube_Hit : MonoBehaviour
+public class Cube_Hit2 : MonoBehaviour
 {
     public GameObject Effect_1,Effect_2;
     public AudioClip Sound_1,Sound_2;
