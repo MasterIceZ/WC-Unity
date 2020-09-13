@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class NextScene : MonoBehaviour
 {
-    void OnColliderEnter (Collision collision)
+    void OnCollisionEnter (Collision collision)
     {
         if(collision.gameObject.tag == "ExitScene")
         {
